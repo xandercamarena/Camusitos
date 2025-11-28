@@ -110,12 +110,16 @@
 
 /* Fondo optimizado y centrado para la sección de contacto */
 #contacto {
-    background-image: url('Envase.jpg') !important;
-    background-size: 90% auto !important;        /* Cubre toda la sección */
-    background-repeat: no-repeat !important;
-    background-position: center 65% !important; /* Mantiene la parte importante arriba */
-    background-color: #0a1a2a !important;
-    background-attachment: scroll !important; /* 🔥 Evita que se corte en pantallas grandes */
+    /* **NUEVO COLOR DE FONDO SÓLIDO** */
+    background-color: #22543d !important; /* Aplica el verde oscuro que enviaste */
+    
+    /* **SE ELIMINAN LAS PROPIEDADES DE IMAGEN** */
+    background-image: none !important; 
+    background-size: initial !important; 
+    background-repeat: initial !important;
+    background-position: initial !important; 
+    background-attachment: initial !important; 
+    
     padding-top: 120px !important;
     padding-bottom: 120px !important;
 }
