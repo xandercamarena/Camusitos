@@ -40,3 +40,12 @@
 .animation-delay-2000 {
     animation-delay: 2s;
 }
+
+/* Logo Interactivo */
+.interactive-logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.interactive-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
