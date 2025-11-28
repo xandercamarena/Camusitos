@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Gomitas Naturales</title>
+    
+    <!-- 1. Enlace a Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para usar 'Inter' y colores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#38a169', /* Verde Principal */
+                        'dark-blue': '#22543d', /* Verde Oscuro para Header/Fondo */
+                        'light-green': '#90d180', /* Verde claro para énfasis */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800 bg-gray-50">
+
+    <!-- Navegación (Header) - Reutilizada para consistencia -->
+    <header class="shadow-lg sticky top-0 z-50 bg-dark-blue">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo - APUNTA A index.html -->
+            <a href="index.html" class="text-3xl font-extrabold text-white tracking-widest rounded-md p-1">
+                CAMUCITOS
+            </a>
+
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <!-- INICIO - APUNTA A index.html -->
+                <a href="index.html" class="text-white hover:text-gray-300 transition duration-300 font-semibold text-lg">Inicio</a>
+                <a href="acerca_de.html" class="text-primary bg-white px-3 py-2 rounded-full font-bold transition duration-300">Acerca de</a>
+                <!-- CONTÁCTENOS - APUNTA A index.html#contacto -->
+                <a href="index.html" class="bg-primary text-white px-6 py-2 rounded-full font-bold transition duration-300 shadow-md hover:bg-green-600 transform hover:scale-105">
+                    Contáctenos
+                </a>
+            </div>
+
+            <!-- Botón del Menú Móvil -->
+            <button id="menu-button" class="md:hidden text-white hover:text-gray-300 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-green-900/90">
+            <!-- INICIO - APUNTA A index.html -->
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Inicio</a>
+            <a href="acerca_de.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700 bg-primary/20">Acerca de</a>
+            <!-- CONTÁCTENOS - APUNTA A index.html#contacto -->
+            <a href="index.html#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Contáctenos</a>
+        </div>
+    </header>
+
+    <main class="pt-10 pb-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Título Principal -->
+            <h1 class="text-5xl md:text-6xl font-extrabold text-dark-blue text-center mb-12">
+                Conoce a Fondo: Camucitos
+            </h1>
+
+            <!-- Sección de Introducción y Beneficios -->
+            <section class="bg-white p-8 md:p-12 rounded-2xl shadow-xl mb-16 border-t-4 border-primary">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4 text-primary">¿Qué son Camucitos?</h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Son gomitas elaboradas a base de Camu Camu, fruta amazónica reconocida como superalimento por su altísimo contenido de vitamina C y sus propiedades antioxidantes. Estas gomitas representan una alternativa saludable frente a los dulces convencionales, dirigidas a un público que busca opciones funcionales, nutritivas y naturales.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center"><span class="text-primary font-bold mr-2">✓</span> Alto en Nutrientes: Ingredientes activos en dosis efectivas.</li>
+                            <li class="flex items-center"><span class="text-primary font-bold mr-2">✓</span> Fórmula Natural Vegana: Pectina, Camu Camu, Gelatina Neutra</li>
+                            <li class="flex items-center"><span class="text-primary font-bold mr-2">✓</span> Sabor Exquisito: Sin el sabor amargo de los suplementos tradicionales.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Bloque de Imagen: Se eliminó la altura fija (h-64) para que la imagen mantenga su proporción -->
+                    <!-- Se cambió 'h-64' por 'h-auto' y se añadió 'aspect-video' o 'aspect-square' si se desea una proporción fija, pero para mantener la proporción de la imagen original, solo quitamos la altura forzada. -->
+                    <div class="w-full flex items-center justify-center overflow-hidden rounded-xl shadow-lg bg-gray-100 p-2">
+                        <img 
+                            src="Primera.jpg" 
+                            alt="Botella de Gomitas Naturales de Camu Camu"
+                            class="w-full h-auto object-cover rounded-lg" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/a7f3d0/14532d?text=Imagen+de+Producto';"
+                        >
+                    </div>
+                    <!-- Fin de Bloque de Imagen -->
+
+                </div>
+            </section>
+
+            <!-- Sección de Ingredientes y Nutrición -->
+            <section class="mb-16">
+                <h2 class="text-4xl font-extrabold text-center text-dark-blue mb-10">Transparencia y Nutrición</h2>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Columna de Ingredientes -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-dark-blue border-b pb-2 border-gray-200">Ingredientes Clave</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
+                                <li>Extracto de Camu Camu: Rico en Vitamina C.</li>
+                                <li>Pectina Vegetal: Para una textura perfecta y apta para veganos.</li>
+                                <li>Concentrado de Frutas: Sabor natural y delicioso.</li>
+                                <li>Vitamina B6; Vitamina C: Apoyo para un metabolismo energético y saludable.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna de Datos Nutricionales (Tabla de ejemplo simplificada) -->
+                        <div class="md:col-span-2">
+                            <h3 class="text-2xl font-bold mb-4 text-dark-blue border-b pb-2 border-gray-200">Información Nutricional (Por 2 Gomitas)</h3>
+                            <table class="min-w-full text-left text-sm font-light">
+                                <thead class="border-b bg-gray-50 font-medium dark:border-neutral-500">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">Nutriente</th>
+                                        <th scope="col" class="px-6 py-3">Cantidad</th>
+                                        <th scope="col" class="px-6 py-3">% Valor Diario</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b dark:border-neutral-500 hover:bg-gray-100">
+                                        <td class="whitespace-nowrap px-6 py-3 font-medium">Calorías</td>
+                                        <td class="whitespace-nowrap px-6 py-3">15 kcal</td>
+                                        <td class="whitespace-nowrap px-6 py-3"></td>
+                                    </tr>
+                                    <tr class="border-b dark:border-neutral-500 hover:bg-gray-100">
+                                        <td class="whitespace-nowrap px-6 py-3 font-medium">Azúcares Totales</td>
+                                        <td class="whitespace-nowrap px-6 py-3">0g</td>
+                                        <td class="whitespace-nowrap px-6 py-3"></td>
+                                    </tr>
+                                    <tr class="border-b dark:border-neutral-500 hover:bg-gray-100">
+                                        <td class="whitespace-nowrap px-6 py-3 font-medium">Vitamina C</td>
+                                        <td class="whitespace-nowrap px-6 py-3">90 mg</td>
+                                        <td class="whitespace-nowrap px-6 py-3">100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    <script>
+        // Lógica de menú móvil
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

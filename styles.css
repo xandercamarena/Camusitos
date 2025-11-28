@@ -1,0 +1,125 @@
+/* ------------------------------------------------------------------- */
+/* 1. Variables de Color */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --color-primary: #38a169;
+    --color-dark: #22543d;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. HEADER (Transparencia Total y Superposición) */
+/* ------------------------------------------------------------------- */
+
+.header-bg {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 100 !important;
+}
+
+.header-bg a,
+.header-bg .logo,
+.header-bg h1 {
+    color: #ffffff !important; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important; 
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. SECCIÓN HERO */
+/* ------------------------------------------------------------------- */
+
+.hero-background {
+    background-image: url('LOGO.jpg'); 
+    filter: none !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 100px; 
+}
+
+.hero-background h1,
+.hero-background p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. FAQ y Tarjetas */
+/* ------------------------------------------------------------------- */
+
+#contacto .space-y-4 > div {
+    font-weight: bold; 
+    font-size: 1.125rem; 
+    background-color: transparent !important; 
+}
+
+/* ------------------------------------------------------------------- */
+/* 6. TOOLTIP / POPUP FLOTANTE */
+/* ------------------------------------------------------------------- */
+
+.group {
+    overflow: visible !important; 
+    position: relative; /* 🔥 NECESARIO PARA EL POPUP */
+}
+
+.tooltip-box {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 15px;
+    z-index: 9999;
+    background-color: var(--color-dark);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.group:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ------------------------------------------------------------------- */
+/* 7. Botón */
+/* ------------------------------------------------------------------- */
+
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(56, 161, 105, 0.5); 
+}
+
+/* ------------------------------------------------------------------- */
+/* 8. BARRA INFERIOR CON IMAGEN DE FONDO */
+/* ------------------------------------------------------------------- */
+
+/* Fondo optimizado y centrado para la sección de contacto */
+#contacto {
+    background-image: url('Envase.jpg') !important;
+    background-size: 90% auto !important;        /* Cubre toda la sección */
+    background-repeat: no-repeat !important;
+    background-position: center 65% !important; /* Mantiene la parte importante arriba */
+    background-color: #0a1a2a !important;
+    background-attachment: scroll !important; /* 🔥 Evita que se corte en pantallas grandes */
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+}
+
+
+
+

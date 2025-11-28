@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camucitos</title>
+    
+    <!-- 1. Enlace a Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind para usar 'Inter' y colores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#38a169', /* Verde Principal */
+                        'dark-blue': '#22543d', /* Verde Oscuro para Header */
+                        'light-green': '#90d180', /* Nuevo verde claro para botones/enfásis en fondo oscuro */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 2. Enlace a Estilos CSS Personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Navegación (Header) -->
+    <header class="header-bg shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo - RUTA CORRECTA -->
+            <a href="index.html" class="text-3xl font-extrabold text-white tracking-widest rounded-md p-1">
+                Camucitos
+            </a>
+
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <!-- INICIO - RUTA CORRECTA -->
+                <a href="index.html" class="text-white hover:text-gray-300 transition duration-300 font-semibold text-lg">Inicio</a>
+                <a href="acerca_de.html" class="text-white hover:text-gray-300 transition duration-300 font-semibold text-lg">Acerca de</a>
+                <a href="#contacto" class="bg-primary text-white px-6 py-2 rounded-full font-bold transition duration-300 shadow-md hover:bg-green-600 transform hover:scale-105">
+                    Contáctenos
+                </a>
+            </div>
+
+            <!-- Botón del Menú Móvil -->
+            <button id="menu-button" class="md:hidden text-white hover:text-gray-300 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center bg-green-900/90">
+            <!-- INICIO - RUTA CORRECTA -->
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Inicio</a>
+            <a href="acerca_de.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Acerca de</a>
+            <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-green-700">Contáctenos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Principal (Hero) -->
+        <section class="relative overflow-hidden pt-24 pb-32 bg-dark-blue text-white hero-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                        VitaGummies
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Energía y bienestar natural en cada mordida
+                    </p>
+                    <a href="#contacto" class="btn-primary inline-block bg-primary text-white text-lg font-bold px-8 py-3 rounded-full shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+                        Inicia tu Pedido
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="py-20 md:py-28">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-center mb-12 text-dark-blue">Conócenos mas...</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Tarjeta de Servicio 1 -->
+                    <div class="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border border-gray-100">
+                        <h2 class="text-xl font-bold mb-3 text-dark-blue">Nuestra Historia</h2>
+                        <p>VitaGummies nació como el proyecto de cinco estudiantes de Negocios Internacionales que buscaban crear un producto natural, peruano y con potencial global.</p>
+
+                    <!-- ⭐ SUBVENTANA EMERGENTE (POPUP) -->
+                    <div class="tooltip-box">
+                        <img src="Historia.jpg" class="w-full h-32 object-cover rounded-md mb-3">
+
+                            <h3 class="font-bold text-lg mb-1">El Origen Amazónico</h3>
+                            <p class="text-sm">Vitagummies nace de la investigación de los superfoods amazónicos, destacando el camu camu por su extraordinario aporte de vitamina C y energía natural. Hemos transformado esta fruta en un formato delicioso y práctico: gomitas veganas llenas de vitaminas y nutrientes. Vitagummies es una marca que combina innovación, salud y sabor, diseñada para ser la fuente de energía natural accesible para estudiantes, profesionales y personas activas, con el objetivo de expandirse desde Perú hacia el mundo.</p>
+                        </div>  
+                    </div>
+
+                    <!-- Tarjeta de Servicio 2 -->
+                    <div class="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border border-gray-100">
+                        <h2 class="text-xl font-bold mb-3 text-dark-blue">Visión</h2>
+                        <p>Nuestra visión es consolidarnos como una marca peruana referente en la industria de suplementos naturales funcionales, reconocida tanto a nivel nacional como internacional por su calidad, innovación y compromiso con el desarrollo sostenible.</p>
+
+                    <!-- ⭐ SUBVENTANA EMERGENTE (POPUP) -->
+                    <div class="tooltip-box">
+                        <img src="Vision.jpg" class="w-full h-32 object-cover rounded-md mb-3">
+
+                            <h3 class="font-bold text-lg mb-1">Impacto positivo en la salud y el bienestar</h3>
+                            <p class="text-sm">Buscamos ser una empresa que genere impacto positivo en la salud de las personas, en el aprovechamiento responsable de los recursos naturales y en la promoción de productos peruanos con valor agregado.
+A largo plazo, queremos convertir a Vitagummies en un símbolo de bienestar accesible, investigación aplicada y espíritu emprendedor, demostrando que un proyecto universitario puede transformarse en una propuesta competitiva y con potencial global.</p>
+                        </div>  
+                    </div>
+                    
+                    <!-- Tarjeta de Servicio 3 -->
+                    <div class="group relative bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 border border-gray-100">
+                        <h2 class="text-xl font-bold mb-3 text-dark-blue">Misión</h2>
+                        <p>En Vitagummies trabajamos para transformar la manera en que las personas obtienen energía y nutrientes esenciales en su día a día.</p>
+
+                    <!-- ⭐ SUBVENTANA EMERGENTE (POPUP) -->
+                    <div class="tooltip-box">
+                        <img src="Mision.jpg" class="w-full h-32 object-cover rounded-md mb-3">
+
+                            <h3 class="font-bold text-lg mb-1">Gomitas Saludables con Identidad Peruana</h3>
+                            <p class="text-sm">Nuestra misión es crear gomitas naturales y veganas hechas con camu camu peruano, ofreciendo una opción saludable, práctica y nutritiva. Como cinco estudiantes de Negocios Internacionales, buscamos innovar utilizando superfoods amazónicos de manera responsable. Queremos ofrecer productos accesibles, de alta calidad y sostenibles, que ayuden a estudiantes, trabajadores y personas activas a mantener su energía y llevar un estilo de vida más equilibrado.</p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto (Diseño de la Imagen) -->
+        <section id="contacto" class="py-20 md:py-28 bg-dark-blue text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Contenedor Principal: Tarjeta de Contacto/Formulario (Izquierda) y FAQ (Derecha) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                    <!-- Columna 1: Contacto y Formulario -->
+                    <div>
+                        <h2 class="text-4xl font-extrabold mb-8">Contacto</h2>
+                        
+                        <!-- Bloque de Información de Contacto -->
+                        <div class="space-y-4 mb-8">
+                            <!-- Opción 1: WhatsApp (Estructura Solicitada) -->
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-primary p-3 rounded-full flex-shrink-0">
+                                    <!-- Icono de WhatsApp -->
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.04 2C6.58 2 2.14 6.47 2.14 11.93c0 1.77.47 3.4 1.34 4.84l-1.42 5.17 5.3-1.39c1.37.79 2.93 1.25 4.62 1.25 5.46 0 9.9-4.47 9.9-9.93C21.94 6.47 17.5 2 12.04 2zm3.17 12.83c-.12.2-.4.27-.67.14-.37-.17-1.34-.63-1.55-.71-.21-.08-.45-.11-.64.12-.19.23-.74.9-.91 1.07-.17.18-.33.2-.61.05-.3-.15-1.28-.47-2.4-1.47-.88-.79-1.47-1.78-1.64-2.07-.17-.3-.02-.46.12-.58.12-.1.25-.2.37-.32.09-.1.17-.18.25-.26.09-.08.12-.17.16-.3.04-.12 0-.23-.1-.36-.1-.13-.67-1.61-.92-2.2-.25-.59-.51-.49-.7-.5-.17 0-.36-.02-.51-.02-.15 0-.4.05-.62.27-.22.23-.84.8-.84 1.95 0 1.15.86 2.25 1.02 2.41.16.16 1.63 2.5 3.94 3.49 2.31.99 2.31.67 2.73.63.42-.04 1.3-.53 1.48-1.06.18-.53.18-.98.13-1.06-.05-.08-.19-.13-.4-.25z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-lg text-light-green">+51 920 569 383 (WhatsApp)</p>
+                                    <!-- Reemplaza '525512345678' por tu número real -->
+                                    <a href="https://wa.me/51920569383?text=Hola%2C%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios." target="_blank" class="text-gray-400 hover:text-gray-200 transition duration-300 text-sm">
+                                        ¡Clic para iniciar chat!
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Opción 2: Correo Electrónico -->
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-primary p-3 rounded-full flex-shrink-0">
+                                    <!-- Icono de Email -->
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-lg text-light-green">Correo Electrónico</p>
+                                    <a href="mailto:contacto@naturalconsult.com" class="text-gray-400 hover:text-gray-200 transition duration-300 text-sm">
+                                        contacto@Camucitos.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formulario de Contacto -->
+                        <form action="#" method="POST" class="space-y-4">
+                            <!-- Campos ajustados para fondo oscuro -->
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium mb-1">Nombre y Apellido</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium mb-1">Teléfono</label>
+                                <input type="tel" name="telefono" id="telefono" placeholder="Tu Teléfono (opcional)" class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">Correo Electrónico</label>
+                                <input type="email" name="email" id="email" placeholder="Tu Email" required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required class="mt-1 block w-full px-4 py-3 border border-gray-600 rounded-lg shadow-sm focus:ring-primary focus:border-primary bg-gray-700 text-white placeholder-gray-400"></textarea>
+                            </div>
+                            <div>
+                                <!-- Botón con estilo de la imagen (fondo claro) -->
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-lg font-bold text-dark-blue bg-light-green hover:bg-green-300 transition duration-300 transform hover:scale-[1.01]">
+                                    Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Columna 2: Preguntas Frecuentes (FAQ) -->
+                    <div>
+                        <h2 class="text-4xl font-extrabold mb-8">Compromiso Social y Ético de VitaGummies</h2>
+
+                        <!-- Lista de FAQ (Placeholder con estilo acorde) -->
+                        <div class="space-y-4">
+                            <div class="border-b border-gray-700 py-3 cursor-pointer hover:text-primary transition duration-200">
+                                <span class="text-primary mr-2 font-bold text-xl">▶</span> Promover el uso responsable de recursos naturales:  
+                                <p>Garantizamos que el camu camu y demás insumos utilizados provengan de proveedores responsables, priorizando cadenas de suministro que respeten el medio ambiente, la biodiversidad y las prácticas sostenibles de la Amazonía peruana.</p>
+                            </div>
+                            <div class="border-b border-gray-700 py-3 cursor-pointer hover:text-primary transition duration-200">
+                                <span class="text-primary mr-2 font-bold text-xl">▶</span> Garantizar transparencia y honestidad:
+                               <p> Nuestro compromiso ético se basa en ofrecer productos seguros, de calidad comprobada y con información clara sobre sus ingredientes, beneficios y procesos de elaboración. Rechazamos cualquier práctica engañosa o que genere falsas expectativas.</p>
+                            </div>
+                            
+                            
+                            <!-- Botón de 'Ver más información' -->
+                            <div class="pt-6">
+                                <a href="acerca_de.html" class="inline-block border-2 border-light-green text-light-green font-bold px-6 py-2 rounded-full hover:bg-light-green hover:text-dark-blue transition duration-300">
+                                    Ver más información
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. Bloque de Lógica JavaScript (Requiere script.js) -->
+    <script>
+        // Lógica de menú móvil
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+
+</body>
+</html>
